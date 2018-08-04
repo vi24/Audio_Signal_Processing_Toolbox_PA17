@@ -1,0 +1,123 @@
+<resources>
+    <string name="app_name">Audio Signal Processing Toolbox</string>
+
+    <!-- ActionBar -->
+    <string name="action_bar_fx_switch">FX</string>
+
+    <!-- Drawer menu head -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_header_faculty">ZHAW School of Engineering</string>
+    <string name="navigation_header_institute">Centre for Signal Processing/Communications Engineering</string>
+
+    <!-- Drawer menu item titles -->
+    <string name="drawer_menu_item_music">My music</string>
+    <string name="drawer_menu_item_music_streaming">Music streaming</string>
+    <string name="drawer_menu_item_microphone">Microphone</string>
+    <string name="drawer_menu_item_visualisation">Visualisation</string>
+    <string name="drawer_menu_item_view_configuration">View configuration</string>
+    <string name="drawer_menu_item_audio_effects_filter">Filters and audio effects</string>
+    <string name="drawer_menu_item_fx_params">FX Parameters</string>
+    <string name="drawer_menu_item_settings">Settings</string>
+    <string name="drawer_menu_item_about_app">About the app</string>
+    <string name="drawer_menu_item_metronom">Metronom</string>
+
+
+    <!-- Media browser -->
+    <string name="title_activity_media_browser">Media Browser</string>
+    <string name="title_activity_media_list">Media List</string>
+
+    <!-- Media list -->
+    <string name="search_hint">Search tracks</string>
+
+    <!-- Audio player -->
+    <string name="play_pause">play or pause</string>
+    <string name="skip_next">skip to next</string>
+    <string name="skip_prev">skip to previous</string>
+    <string name="play_item">Play item</string>
+    <string name="currently_playing_song">Song currently playing</string>
+    <string name="currently_playing_artist">Artist of currently playing track</string>
+    <string name="title">Title</string>
+    <string name="artist">Artist</string>
+    <string name="start">start</string>
+    <string name="end">end</string>
+
+    <!-- View config -->
+    <string name="view_config_view1">View 1</string>
+    <string name="view_config_view2">View 2</string>
+    <string name="view_config_pre_fx">pre audio effect</string>
+    <string name="view_config_post_fx">post audio effect</string>
+    <string name="view_config_pre_and_post_fx">both</string>
+
+    <!-- FX section -->
+    <string name="audio_fx_chain_title">Select insert effects</string>
+    <string name="insert_effect_1">Insert 1</string>
+    <string name="insert_effect_2">Insert 2</string>
+    <string name="insert_effect_3">Insert 3</string>
+    <string name="insert_effect_4">Insert 4</string>
+    <string name="audio_source">Audio source</string>
+    <string name="no_fx">No fx/filter</string>
+    <string name="low_pass_filter">Low pass filter</string>
+    <string name="high_pass_filter">High pass filter</string>
+    <string name="band_pass_filter">Band pass filter</string>
+    <string name="band_stop_filter">Band stop filter</string>
+    <string name="ring_modulation">Ring modulation</string>
+    <string name="tremolo">Tremolo</string>
+    <string name="flanger">Flanger</string>
+
+    <!-- Gain settings -->
+    <string name="post_fx_gain">Post FX Gain</string>
+    <string name="linear_gain">Linear</string>
+
+    <!-- FX Parameters -->
+    <string name="ringmod_mod_freq">mod. frequency:</string>
+    <string name="tremolo_mod_freq">mod. frequency:</string>
+    <string name="flanger_rate">rate:</string>
+    <string name="tremolo_mod_ampl">mod. amplitude:</string>
+    <string name="flanger_mod_ampl">mod. amplitude:</string>
+    <string name="flanger_mod_delay">mod. delay:</string>
+    <string name="bitcrusher">Bitcrusher</string>
+    <string name="bitcrusher_norm_freq">norm. frequency (freq / sample rate):</string>
+    <string name="bitcrusher_bits">bits:</string>
+    <string name="soft_clipper">Soft clipper</string>
+    <string name="soft_clipper_clipping_factor">clipping factor:</string>
+    <string name="waveshaper">Waveshaper</string>
+    <string name="waveshaper_threshold">threshold:</string>
+    <string name="tube_distortion">Tube distortion</string>
+    <string name="tube_distortion_gain">gain:</string>
+    <string name="tube_distortion_mix">mix:</string>
+
+    <!-- A propos -->
+    <string name="uni_name">Zurich University of Applied Sciences</string>
+    <string name="uni_city">Winterthur, Switzerland</string>
+    <string name="uni_url">www.zhaw.ch/engineering/</string>
+    <string name="bachelor_thesis">2017 bachelor thesis in computer science</string>
+    <string name="app_dev">Application development</string>
+    <string name="dev1">Rémi Georgiou</string>
+    <string name="dev2">André Stocker</string>
+    <string name="supervision">Guidance and supervision</string>
+    <string name="prof1">Dr. Martin Loeser</string>
+    <string name="prof2">Dr. Sigi Wyrsch</string>
+
+
+    <!-- A metronom -->
+    <string name="metronom_beat_TextView">beat: -</string>
+
+
+
+    <!-- Application settings (prefs) section -->
+    <!-- pref categories -->
+    <string name="pref_cat_spectral_view_title">Spectral view</string>
+    <string name="pref_cat_spectrogram_title">Spectrogram</string>
+
+    <!-- prefs -->
+    <string name="pref_fft_resolution">FFT resolution</string>
+    <string name="pref_window_type">Window type</string>
+    <string name="pref_colormap_type">Colormap</string>
+    <string name="pref_magnitude_db_floor">Magnitude Floor</string>
+    <string name="pref_fft_resolution_default">4096</string>
+    <string name="pref_window_type_default">Hamming</string>
+    <string name="pref_colormap_type_default">Rainbow</string>
+    <string name="pref_magnitude_db_floor_default">-120 dB</string>
+
+</resources>

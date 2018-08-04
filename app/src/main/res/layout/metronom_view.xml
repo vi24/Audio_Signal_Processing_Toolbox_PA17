@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/play_simple_metronome"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Play" />
+
+        <Button
+            android:id="@+id/stop_simple_metronome"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Stop" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="BPM: " />
+    <com.lantouzi.wheelview.WheelView
+        android:id="@+id/wheelview1"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_height="@dimen/drawer_item_height" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="Loops: "/>
+    <com.lantouzi.wheelview.WheelView
+        android:id="@+id/wheelview2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/drawer_item_height" />
+
+    <Button
+        android:id="@+id/select_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="select file" />
+
+    <Button
+        android:id="@+id/analyze"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Analyze" />
+
+    <Button
+        android:id="@+id/generate_mp3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generate MP3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/play_to_song"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Play to Song" />
+        <Button
+            android:id="@+id/stop_to_song"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Stop" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/play_with_song"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Play with Song" />
+        <Button
+            android:id="@+id/stop_with_song"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Stop" />
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/textViewBeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="@string/metronom_beat_TextView" />
+    </LinearLayout>
+</ScrollView>

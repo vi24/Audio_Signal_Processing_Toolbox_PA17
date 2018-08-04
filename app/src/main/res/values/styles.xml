@@ -1,0 +1,40 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:dropDownListViewStyle">@style/spinner_style</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Audio FX chain switch -->
+    <style name="AudioFXSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/fx_switch_green</item>
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">@color/fx_switch_disable_foreground</item>
+    </style>
+
+    <!-- Toolbar title text size -->
+    <style name="ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Dropdown menus (spinners) -->
+    <style name="spinner_style">
+        <item name="android:padding">4dp</item>
+        <item name="android:background">@color/spinner_background_color</item>
+        <item name="android:divider">@color/spinner_divider_color</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+        <item name="android:dropDownSelector">@color/colorPrimaryDark</item>
+    </style>
+
+</resources>

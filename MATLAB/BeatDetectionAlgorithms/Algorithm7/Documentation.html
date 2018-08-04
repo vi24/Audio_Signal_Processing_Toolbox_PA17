@@ -1,0 +1,123 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Some Basic Audio Features</title>
+<style type="text/css">
+<!--
+.style14 {font-size: 18px}
+.style15 {
+	font-size: 12px;
+}
+.style16 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #003300;
+}
+.style17 {
+	color: #009900;
+	font-weight: bold;
+	font-size: 24px;
+}
+.style18 {font-size: 18px; color: #003300; }
+.style19 {font-size: 18px; font-weight: bold; }
+.style20 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style22 {
+	color: #990000;
+	font-weight: bold;
+	font-style: italic;
+}
+.style23 {
+	color: #33CC00;
+	font-style: italic;
+	font-weight: bold;
+}
+.style24 {
+	font-size: 18px;
+	color: #FF0000;
+	font-style: italic;
+}
+-->
+</style>
+</head>
+
+<body>
+
+<table width="100%" border="1">
+  <tr>
+    <td width="80%" class="style14"><span class="style17">Some Basic Audio Features</span></td>
+    <td width="20%" class="style15"><font color="#003333"><strong>Theodoros Giannakopoulos </strong><br>
+Department of Informatics and Telecommunications <br>
+Univarsity of Athens, Greece <br>
+<strong>website:</strong></font> <strong><a href="http://www.di.uoa.gr/~tyiannak" target="_blank">www.di.uoa.gr/~tyiannak</a></strong></td>
+  </tr>
+</table>
+<p align="center" class="style18">&nbsp;</p>
+<p align="center" class="style18"><strong>General</strong></p>
+<p class="style18">Feature extraction (as in most pattern recognition problems) is maybe the most important step in <strong>audio classification tasks</strong>. The provided Matlab code computes some of the basic audio features for <strong>groups of sounds stored in WAV files</strong>. Furthermore, a simple <strong>class separability measure</strong>, based on feature histograms is used for measuring the ability of each feature to be used for classifying the given classes. <span class="style20">Therefore, you can use the provided m-files for computing the features of an audio classification problem (i.e. specific audio classes) and understanding &quot;how good&quot; those features are for the specific classification task.</span></p>
+<p align="center" class="style18">&nbsp;</p>
+<p align="center" class="style18"><strong>Feature Calculation</strong></p>
+<p class="style18">The features are calculated in a two-step way:</p>
+<table width="50%" border="1" align="center">
+  <tr>
+    <td width="17%"><span class="style16">STEP 1</span></td>
+    <td width="83%"><span class="style18">The audio signal is broken into short-term non-overlapping windows (frames) of 50 mseconds. <strong>For each frame, 6 features are calculated</strong>: Energy Entropy, Energy, Zero Crossing Rate, Spectral Rolloff, Spectral Centroid and Spectral Flux. This step leads to 6 feaure sequences for the whole audio signal.</span></td>
+  </tr>
+  <tr>
+    <td><span class="style16">STEP 2</span></td>
+    <td><span class="style18">In the sequel, <strong>for each of the 6 feature sequences, a simple statistic is calculated</strong>. For example, the standard deviation value of the Spectral Rolloff sequence. This step leads to <strong>6 single statistic values (one for each feature sequence)</strong>. Those 6 values are the final feature values that characterize the input audio signal.</span></td>
+  </tr>
+</table>
+<p class="style18">In particular, the following audio features and respective statistics are extracted <strong>for each audio segment</strong>:</p>
+<table width="60%" border="1" align="center">
+  <tr>
+    <td class="style14"><strong>Features</strong></td>
+    <td class="style19">Statistics</td>
+  </tr>
+  <tr>
+    <td class="style14">Energy Entropy</td>
+    <td class="style14">Standard Deviation (std)</td>
+  </tr>
+  <tr>
+    <td class="style14">Signal Energy</td>
+    <td class="style14">Std by Mean (average) Ratio</td>
+  </tr>
+  <tr>
+    <td class="style14">Zero Crossing Rate</td>
+    <td class="style14">Std</td>
+  </tr>
+  <tr>
+    <td class="style14">Spectral Rolloff</td>
+    <td class="style14">Std</td>
+  </tr>
+  <tr>
+    <td class="style14">Spectral Centroid</td>
+    <td class="style14">Std</td>
+  </tr>
+  <tr>
+    <td class="style14">Spectral Flux</td>
+    <td class="style14">Std by Mean Ratio</td>
+  </tr>
+</table>
+<p class="style24">In order to compute the 6 feature statistics for a specific .wav file, you can use the <strong>computeAllStatistics</strong>(fileName, win, step).</p>
+<p align="center" class="style18"><strong>Audio Feature Separability</strong></p>
+<p class="style18">After the features are calculated, </p>
+<p class="style18"><strong>a)</strong> the <span class="style20">histograms</span> of each feature for all classes are estimated</p>
+<p class="style18"><strong>b)</strong> a simple algorithm is used for estimating the <span class="style20">separability of the audio classes</span>. In other words, a measure that describes how &quot;easily&quot; the features will be classified. In the case of a multi-class classification problem, the measure is calculated for EACH CLASS opposed to ALL OTHER CLASSES, i.e. a measure value FOR EACH CLASS is computed. The algorithm is described in detail in <a href="http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=18791&objectType=FILE#">http://www.mathworks.com/matlabcentral/fileexchange/loadFile.do?objectId=18791&amp;objectType=FILE#</a>.</p>
+<p align="center" class="style18"><strong>Execution Example</strong></p>
+<p class="style18">The main function of this demo is computeFeaturesDirectory(). The only recuired argument is a cell array with the names of the directories in which the .wav files of the respective classes are stored. For example, suppose you have three folders named MUSIC, SPEECH and NOISE, each one containing wav files with relevant audio content (i.e. wav files of segments containing music, speech and noise). In order to compute the audio features of those files simply write:</p>
+<p class="style18">&gt;&gt; F = computeFeaturesDirectory({'music','speech','noise'});</p>
+<p class="style18">The result may look like the following figure. There, you can see the 3 histograms (of the 3 classes: music, speech and noise) for 6 six features. Also, for each feature the best, worst and average value of the seperability measure for the specific classification problem is plotted. </p>
+<p class="style18">For example, for the 1st feature, the best separability measure is 8.3% (speech), which means that <span class="style22">the classification error, using the histogram methods, for the binary classification problem of SPEECH vs NON-SPEECH (music, noise) is 8.3% using this feature</span>. Also, <span class="style23">for the same feature the classification error for the problem of MUSIC vs NON-MUSIC is 23.6%</span>.</p>
+<p class="style18"><img src="example.jpg"></p>
+<p class="style18">&nbsp;</p>
+<p class="style18">&nbsp;</p>
+<p class="style16">&nbsp;</p>
+<p class="style18">&nbsp;</p>
+<p class="style18">&nbsp;</p>
+<p class="style18">&nbsp;</p>
+<p class="style18">&nbsp;</p>
+</body>
+</html>

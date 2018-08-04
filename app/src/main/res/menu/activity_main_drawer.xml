@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_metronom"
+            android:icon="@drawable/ic_metronome_black_24dp"
+            android:title="@string/drawer_menu_item_metronom" />
+        <item
+            android:id="@+id/nav_media_list"
+            android:icon="@drawable/ic_playlist_music_black_24dp"
+            android:title="@string/drawer_menu_item_music" />
+        <item
+            android:id="@+id/nav_stream_list"
+            android:icon="@drawable/ic_cloud_download_black_48dp"
+            android:title="@string/drawer_menu_item_music_streaming" />
+        <item
+            android:id="@+id/nav_visualisation"
+            android:icon="@drawable/ic_sound_wave_48dp"
+            android:title="@string/drawer_menu_item_visualisation" />
+        <item
+            android:id="@+id/nav_view"
+            android:icon="@drawable/ic_view_black_18dp"
+            android:title="@string/drawer_menu_item_view_configuration" />
+        <item
+            android:id="@+id/nav_filter"
+            android:icon="@drawable/lowpass_ir"
+            android:title="@string/drawer_menu_item_audio_effects_filter" />
+        <item
+            android:id="@+id/nav_fx_params"
+            android:icon="@drawable/ic_fx_params_48dp"
+            android:title="@string/drawer_menu_item_fx_params" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_build_black_18dp"
+            android:title="@string/drawer_menu_item_settings" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/about_96"
+            android:title="@string/drawer_menu_item_about_app" />
+    </group>
+
+</menu>

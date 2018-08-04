@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/colorAccent"
+    tools:context="ch.zhaw.bait17.audio_signal_processing_toolbox.ui.MainActivity">
+
+    <include
+        android:id="@+id/toolbar_container"
+        layout="@layout/include_toolbar" />
+
+    <!-- Main content Fragment -->
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/audio_player_fragment"
+        android:layout_below="@+id/toolbar_container" />
+
+    <!-- Audio Player Fragment -->
+    <FrameLayout
+        android:id="@+id/audio_player_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/audio_player_height"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

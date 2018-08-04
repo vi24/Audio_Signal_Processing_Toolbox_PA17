@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="background_content">#ffffff</color>
+    <color name="background_fragment">#000000</color>
+
+    <!-- Media list items -->
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+
+    <color name="bt_accent">#00B8D4</color>
+    <color name="media_item_icon_playing">@color/bt_accent</color>
+    <color name="media_item_icon_not_playing">@color/secondary_text</color>
+    <color name="drawer_header_background">@color/bt_accent</color>
+    <color name="drawer_item_selected_background">#feee</color>
+    <color name="drawer_item_tint_color">#ff333333</color>
+    <color name="fullscreen_secondary_line_color">#E5CCCCCC</color>
+    <color name="fullscreen_line_color">#E5FFFFFF</color>
+    <color name="background_gradient_start">#666666</color>
+    <color name="background_gradient_end">#DDDDDD</color>
+    <color name="default_background">#0096a6</color>
+    
+    <!-- Audio player -->
+    <color name="artist_track">#00FFFFFF</color>
+
+    <!-- AudioView -->
+    <color name="line_spectrum">#000000</color>
+    <color name="default_waveform">#333333</color>
+    <color name="pre_filter_waveform">@android:color/black</color>
+    <color name="post_filter_waveform">@android:color/holo_red_light</color>
+    <color name="default_spectrum_freq_label">#000000</color>
+
+    <!-- Audio FX switch -->
+    <color name="fx_switch_disable_foreground">#42221f</color>
+    <color name="fx_switch_green">#f44336</color>
+
+    <!-- Spinners -->
+    <color name="spinner_background_color">#FFFFFF</color>
+    <color name="spinner_divider_color">@android:color/darker_gray</color>
+
+</resources>
